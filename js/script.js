@@ -15,7 +15,7 @@ function titleClickHandler(event){
   }
   /* add class 'active' to the clicked link */
 
-  clickedElement.classList.add('active')
+  clickedElement.classList.add('active');
   console.log('clickedElement:' , clickedElement);
 
   /* remove class 'active' from all articles */
@@ -37,7 +37,7 @@ function titleClickHandler(event){
   
   /* add class 'active' to the correct article */
 
- targetArticle.classList.add('active');
+  targetArticle.classList.add('active');
 
 }
 
@@ -87,8 +87,8 @@ function generateTitleLinks(){
     titleList.insertAdjacentHTML('afterbegin', linkHTML);
     
    
-   html = html + linkHTML ;
-   console.log(html);
+    html = html + linkHTML ;
+    console.log(html);
    
   } 
   const links = document.querySelectorAll('.titles a');
