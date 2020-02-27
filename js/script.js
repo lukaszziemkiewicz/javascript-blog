@@ -48,7 +48,6 @@ const optArticleSelector = '.post',
 
 function generateTitleLinks(){
 
-  
 
   /* remove contents of titleList */
 
@@ -82,9 +81,9 @@ function generateTitleLinks(){
 
     /* insert link into titleList */
 
-    titleList.insertAdjacentHTML('afterbegin', linkHTML);
+    titleList.insertAdjacentHTML('beforeend', linkHTML);
     
-    html = html + linkHTML ;
+    html = html + linkHTML;
     console.log(html);
    
   } 
@@ -131,7 +130,6 @@ function generateTags(){
     
     for(let tag of articleTagsArray){
 
-      let html = '';
 
       /* generate HTML of the link */
 
@@ -148,11 +146,17 @@ function generateTags(){
 
     /* insert HTML of all the links into the tags wrapper */
 
-    
+    tagsWrapper.insertAdjacentHTML('beforeend', html);
+
     /* END LOOP: for every article: */ 
     
   }
+  
+  const tags = document.querySelectorAll('.post-tags .list li a');
 
+  for(let tag of tags){
+    tag.addEventListener('click', tagClickHandler);
+  } 
 }
 
 generateTags();
@@ -173,7 +177,7 @@ function tagClickHandler(event){
   console.log(event);
 
   /* make a new constant "tag" and extract tag from the "href" constant */
-
+  debugger;
   const tag = href
 
   /* find all tag links with class active */
@@ -217,7 +221,7 @@ function tagClickHandler(event){
 function addClickListenersToTags(){
   /* find all links to tags */
 
-  
+
 
   /* START LOOP: for each link */
 
