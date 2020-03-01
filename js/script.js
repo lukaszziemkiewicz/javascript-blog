@@ -313,7 +313,7 @@ function authorClickHandler(event){
   console.log(author);
 
   /* find all author links with class active */
-  debugger;
+  
   const authorLinks = document.querySelectorAll('a.active[href^="#author-"]');
   console.log (authorLinks);
 
@@ -364,7 +364,7 @@ function addClickListenersToAuthors(){
   /* END LOOP: for each link */
 
   for(let authorLink of authorLinks){
-    authorLink.addEventListener('click', tagClickHandler);
+    authorLink.addEventListener('click', authorClickHandler);
     
   } 
 
