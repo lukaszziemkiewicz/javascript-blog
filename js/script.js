@@ -406,6 +406,25 @@ function calculateTagClass(count, params){
   return optCloudClassPrefix, classNumber;
 }
 
+function addClickListenersToTagsCloud(){
+  /* find all links to tags */
+
+  const tagLinks = document.querySelectorAll('.sidebar .list a');
+  console.log(tagLinks);
+  
+  /* START LOOP: for each link */
+
+  /* add tagClickHandler as event listener for that link */
+
+  /* END LOOP: for each link */
+
+  for(let tagLink of tagLinks){
+    tagLink.addEventListener('click', tagClickHandler);
+  } 
+
+}
+addClickListenersToTagsCloud();
+
 function generateTagsCloud(){
   
   /*  [NEW] create a new variable allTags with an empty object*/
@@ -494,7 +513,7 @@ function generateTagsCloud(){
   for(let tag in allTags){
     /*[NEW] generate code of a link and add it to allTagsHTML */
 
-    allTagsHTML = allTagsHTML + '<li>' + '<a class="' + optCloudClassPrefix + calculateTagClass(allTags[tag], tagsParams) + '" href="#tag-' + tag + '">' + tag + '(' + allTags[tag] + ')' + '</a>' + '</li>';
+    allTagsHTML = allTagsHTML + '<a class="' + optCloudClassPrefix + calculateTagClass(allTags[tag], tagsParams) + '" href="#tag-' + tag + '">' + tag  + '</a>' ;
   }
 
   /* [NEW] add html from allTagsHTML to taglist */
