@@ -337,7 +337,7 @@ function generateAuthors(){
   /* [NEW] add html from allAuthorsTagsHTML to authorListWrapper */
  
   authorListWrapper.innerHTML = templates.authorRigthtColumnLink(allAuthorsData);
-  console.log(allTagsData);
+  console.log(allAuthorsData);
   /* authorListWrapper.innerHTML = allAuthorsHTML;
   console.log (authorListWrapper); */
   
@@ -436,7 +436,7 @@ addClickListenersToAuthors();
 function addClickListenersToAuthorsRightColumn(){
   /* find all links to tags */
 
-  const authorLinks = document.querySelectorAll('.sidebar .authors a');
+  const authorLinks = document.querySelectorAll('.authors a');
   console.log(authorLinks);
   
   /* START LOOP: for each link */
