@@ -433,6 +433,28 @@ function addClickListenersToAuthors(){
 
 addClickListenersToAuthors();
 
+function addClickListenersToAuthorsRightColumn(){
+  /* find all links to tags */
+
+  const authorLinks = document.querySelectorAll('.sidebar .authors a');
+  console.log(authorLinks);
+  
+  /* START LOOP: for each link */
+
+  /* add tagClickHandler as event listener for that link */
+
+  /* END LOOP: for each link */
+
+  for(let authorLink of authorLinks){
+    authorLink.addEventListener('click', authorClickHandler);
+    
+  } 
+
+}
+
+addClickListenersToAuthorsRightColumn();
+
+
 function calculateTagsParams(tags){
   const params = {min: '99999', max: '0'};
   for(let tag in tags){
