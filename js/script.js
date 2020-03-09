@@ -59,9 +59,11 @@ const optArticleSelector = '.post',
   optCloudClassPrefix = 'tag-size-',
   optAuthorsListSelector = '.authors.list';
 
-function generateTitleLinks(customSelector = ''){
 
-  /* remove contents of titleList */
+
+  function generateTitleLinks(customSelector = ''){
+    debugger;
+/* remove contents of titleList */
 
   const titleList = document.querySelector(optTitleListSelector);
 
@@ -372,7 +374,7 @@ function authorClickHandler(event){
   
   const author = href.replace('#author-', '');
   console.log(author);
-
+  
   /* find all author links with class active */
   
   const authorLinks = document.querySelectorAll('a.active[href^="#author-"]');
