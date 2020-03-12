@@ -500,9 +500,9 @@ function addClickListenersToTagsCloud(){
 
   /* END LOOP: for each link */
 
-  for(let tagLink of tagLinks){
-    tagLink.addEventListener('click', tagClickHandler);
-  } 
+  // for(let tagLink of tagLinks){
+  //   tagLink.addEventListener('click', tagClickHandler);
+  // } 
 
 }
 
